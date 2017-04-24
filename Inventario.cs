@@ -17,8 +17,9 @@ namespace CONTROL_DE_INVENTARIO
             else
             {
                 Productos temp = inicio;
-               
-                    if (nuevo.codigo < temp.codigo)
+                while (temp != null)
+                {
+                    if (temp.codigo > nuevo.codigo)
                     {
                         temp.siguiente = nuevo;
                         temp = temp.siguiente;
@@ -28,6 +29,13 @@ namespace CONTROL_DE_INVENTARIO
                         temp.siguiente = nuevo;
                         temp = temp.siguiente;
                     }
+                    if (temp == null)
+                    {
+                        temp.siguiente = nuevo;
+                        temp = temp.siguiente;
+                    }
+                    temp = temp.siguiente;
+                }
 
             }
         }          
