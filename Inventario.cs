@@ -16,29 +16,22 @@ namespace CONTROL_DE_INVENTARIO
                 inicio = nuevo;
             else
             {
-                Productos temp = inicio;
-                while (temp != null)
+                if (nuevo.codigo < inicio.codigo)
                 {
-                    if (temp.codigo > nuevo.codigo)
-                    {
-                        temp.siguiente = nuevo;
+                    nuevo.siguiente = inicio;
+                    inicio = nuevo;
+                }
+                else
+                {
+                    Productos temp = inicio;
+                    while (temp.siguiente != null && temp.siguiente.codigo < nuevo.codigo)
                         temp = temp.siguiente;
+                    nuevo.siguiente = temp.siguiente;
+                    temp.siguiente = nuevo;
                     }
-                    else
-                    {
-                        temp.siguiente = nuevo;
-                        temp = temp.siguiente;
-                    }
-                    if (temp == null)
-                    {
-                        temp.siguiente = nuevo;
-                        temp = temp.siguiente;
-                    }
-                    temp = temp.siguiente;
                 }
 
-            }
-        }          
+            }    
 
         public Productos Buscar(int codigo)
         {
