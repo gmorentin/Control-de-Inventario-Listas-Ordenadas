@@ -28,10 +28,9 @@ namespace CONTROL_DE_INVENTARIO
                         temp = temp.siguiente;
                     nuevo.siguiente = temp.siguiente;
                     temp.siguiente = nuevo;
-                    }
                 }
-
-            }    
+            }
+        }
 
         public Productos Buscar(int codigo)
         {
@@ -75,3 +74,4 @@ namespace CONTROL_DE_INVENTARIO
         }
     }
 }
+//Hola
