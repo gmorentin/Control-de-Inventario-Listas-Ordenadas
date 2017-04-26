@@ -41,6 +41,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtReporte = new System.Windows.Forms.TextBox();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.btnReporteInvertido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -159,11 +160,23 @@
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
+            // btnReporteInvertido
+            // 
+            this.btnReporteInvertido.AutoSize = true;
+            this.btnReporteInvertido.Location = new System.Drawing.Point(40, 362);
+            this.btnReporteInvertido.Name = "btnReporteInvertido";
+            this.btnReporteInvertido.Size = new System.Drawing.Size(186, 35);
+            this.btnReporteInvertido.TabIndex = 15;
+            this.btnReporteInvertido.Text = "Reporte Invertido";
+            this.btnReporteInvertido.UseVisualStyleBackColor = true;
+            this.btnReporteInvertido.Click += new System.EventHandler(this.btnReporteInvertido_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 483);
+            this.Controls.Add(this.btnReporteInvertido);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.txtReporte);
             this.Controls.Add(this.btnBuscar);
@@ -201,6 +214,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtReporte;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnReporteInvertido;
     }
 }
 

@@ -55,7 +55,6 @@ namespace CONTROL_DE_INVENTARIO
                 if (temp.siguiente.codigo == codigo)
                 {
                     temp.siguiente = temp.siguiente.siguiente;
-                    break;
                 }
                 temp = temp.siguiente;
             }
@@ -72,6 +71,25 @@ namespace CONTROL_DE_INVENTARIO
             }
             return datos;
         }
+
+        public string ReporteInvertido()
+        {
+            string datos = "Reporte Vacio";
+            Productos t = inicio;
+            if (t == null)
+                return datos;
+            else
+                return ReporteInv(t);
+        }
+
+        private string ReporteInv(Productos t)
+        {
+            if (t.siguiente == null)
+                return t.ToString();
+            else
+            {
+                return ReporteInv(t.siguiente)+t.ToString();
+            }
+        }
     }
 }
-//Hola

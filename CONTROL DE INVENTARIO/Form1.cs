@@ -57,6 +57,12 @@ namespace CONTROL_DE_INVENTARIO
            txtReporte.Clear();
            txtReporte.Text+= inv.Reporte().ToString();
         }
+
+        private void btnReporteInvertido_Click(object sender, EventArgs e)
+        {
+            txtReporte.Clear();
+            txtReporte.Text += inv.ReporteInvertido().ToString();
+        }
     }
 }
        
