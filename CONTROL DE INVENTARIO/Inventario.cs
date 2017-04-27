@@ -88,7 +88,7 @@ namespace CONTROL_DE_INVENTARIO
                  return t.ToString();
              else
              {
-                 return ReporteInv(t.siguiente)+t.ToString();
+                return ReporteInv(t.siguiente) + t.ToString();
              }
          }
     }
