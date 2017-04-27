@@ -36,7 +36,7 @@ namespace CONTROL_DE_INVENTARIO
         {
             Productos produ = null;
             Productos temp = inicio;
-            while (temp.siguiente != null)
+            while (temp.siguiente != null && temp.codigo <= codigo)
             {
                 if (temp.siguiente.codigo == codigo)
                 {
@@ -50,7 +50,7 @@ namespace CONTROL_DE_INVENTARIO
         public void Borrar(int codigo)
         {
             Productos temp = inicio;
-            while (temp.siguiente != null)
+            while (temp.siguiente != null && temp.codigo<=codigo)
             {
                 if (temp.siguiente.codigo == codigo)
                 {
@@ -72,24 +72,24 @@ namespace CONTROL_DE_INVENTARIO
             return datos;
         }
 
-        public string ReporteInvertido()
-        {
-            string datos = "Reporte Vacio";
-            Productos t = inicio;
-            if (t == null)
-                return datos;
-            else
-                return ReporteInv(t);
-        }
+         public string ReporteInvertido()
+         {
+             string datos = "Reporte Vacio";
+             Productos t = inicio;
+             if (t == null)
+                 return datos;
+             else
+                 return ReporteInv(t);
+         }
 
-        private string ReporteInv(Productos t)
-        {
-            if (t.siguiente == null)
-                return t.ToString();
-            else
-            {
-                return ReporteInv(t.siguiente)+t.ToString();
-            }
-        }
+         private string ReporteInv(Productos t)
+         {
+             if (t.siguiente == null)
+                 return t.ToString();
+             else
+             {
+                 return ReporteInv(t.siguiente)+t.ToString();
+             }
+         }
     }
 }
